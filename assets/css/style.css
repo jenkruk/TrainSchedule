@@ -1,0 +1,26 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+.trainHeader {
+    height: 300px;
+    border-radius: 0;
+    background-image: url("../images/trainHeader.jpg");
+}
+
+.card-header {
+    background-color: #c0d4de;
+    font-family: 'Prompt', sans-serif;
+}
+
+th {
+    font-family: 'Prompt', sans-serif;
+}
+
+::placeholder {
+    color: lightgrey !important;
+}
+
+button {
+    background-color: #c0d4de;
+}
