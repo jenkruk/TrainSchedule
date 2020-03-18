@@ -1,20 +1,33 @@
+
 * {
-    font-family: 'Raleway', sans-serif;
+    color: rgb(91, 90, 90);
 }
 
 .trainHeader {
     height: 300px;
     border-radius: 0;
     background-image: url("../images/trainHeader.jpg");
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+}
+
+.time {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
 }
 
 .card-header {
     background-color: #c0d4de;
-    font-family: 'Prompt', sans-serif;
+    font-family: 'Playfair Display', serif;
+
 }
 
-th {
-    font-family: 'Prompt', sans-serif;
+#currentTime {
+    font-family: 'Playfair Display', serif;
+}
+
+.card-body {
+    font-family: 'Raleway', sans-serif;
 }
 
 ::placeholder {
@@ -23,4 +36,5 @@ th {
 
 button {
     background-color: #c0d4de;
+    font-family: 'Playfair Display', serif;
 }
