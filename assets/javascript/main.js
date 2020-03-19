@@ -1,4 +1,13 @@
-$(document).ready(function () { // Your web app's Firebase configuration
+// 
+//
+//
+// 
+// ^ Creating space for better readability
+
+
+$(document).ready(function () { 
+    
+    // Firebase configuration
     var firebaseConfig = {
         apiKey: "AIzaSyCSnGhcwoJ88vyCbV75vFtp0UWoDkg8LNY",
         authDomain: "train-schedule-77f87.firebaseapp.com",
@@ -10,12 +19,13 @@ $(document).ready(function () { // Your web app's Firebase configuration
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    var database = firebase.database();
-    //   
+    var database = firebase.database();  
  
     // Button for adding train
     $("#add-train-btn").on("click", function (event) {
+        // Keeps the page from refreshing (and resetting) when button is clicked
         event.preventDefault();
+        // Resets clock so that it shows the current time
         clearInterval(setIntervalId);
         // Grabs user input
         var trainName = $("#train-name-input").val().trim();
@@ -29,7 +39,7 @@ $(document).ready(function () { // Your web app's Firebase configuration
             start: trainStart,
             frequency: trainFrequency
         };
-        // making sure that the entry isn't empty
+        // Makes sure that the entry isn't empty
         if (trainName.length > 0 && trainDestination.length > 0 && trainStart.length > 0 && trainFrequency.length > 0) {
             // Uploads train data to the database
             database.ref().push(newTrain);
@@ -45,12 +55,12 @@ $(document).ready(function () { // Your web app's Firebase configuration
     // Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
     function displayTrain() {
         database.ref().on("child_added", function (childSnapshot) {
-            // Store everything into a variable.
+            // Stores database info into a variable.
             var trainName = childSnapshot.val().name;
             var trainDestination = childSnapshot.val().destination;
             var trainStart = childSnapshot.val().start;
             var trainFrequency = childSnapshot.val().frequency;
-            //   math for time until next train
+            //  Math for time until next train
             var firstTime = moment(trainStart, "HH:mm").format("hh:mm a");
             var tFrequency = parseInt(trainFrequency);
             // Difference between the times
@@ -61,7 +71,7 @@ $(document).ready(function () { // Your web app's Firebase configuration
             var tMinutesTillTrain = tFrequency - tRemainder;
             // Next Train
             var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm a");
-            // Create the new row
+            // Creates the new row
             var newRow = $("<tr>")
             // creation for x to delete
             var removeX = $("<td>");

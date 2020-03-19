@@ -5,22 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- used to make sure that page is standardized across all platforms and windows -->
+    <!-- Use to make sure that page is standardized across all platforms and windows -->
+    <!-- RESET.CSS  -->
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <!-- used for ease of placement of content within page and bootstrap buttons-->
+    <!-- jQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Bootstrap -->
+    <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- Firebase Reference -->
+    <!-- FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <!-- Moment.js Reference -->
+    <!-- MOMENT.JS -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!-- GOOGLE FONTS  -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:400,600&display=swap" rel="stylesheet">
-    <!-- used for basic styling within page -->
+    <link href="https://fonts.googleapis.com/css?family=Scope+One|Playfair+Display|Raleway:400,600&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="icon" href="./assets/images/trainFavicon copy.png" type="image/x-icon">
+    <!-- FAVICON  -->
+    <link rel="icon" href="./assets/images/favTrain.png" type="image/x-icon">
 
     <title>Train Scheduler</title>
 </head>
@@ -29,23 +31,22 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <!-- jumbotron at top of page -->
-                <div class="jumbotron jumbotron-fluid trainHeader">
+                <!-- JUMBOTRON -->
+                <div class="border jumbotron jumbotron-fluid trainHeader">
                 </div>
             </div>
         </div>
 
-        <div class="time row d-flex justify-content-end pr-4 align-self-center">
-            <span> The time is currently <span id="currentTime"></span></span>
+        <!-- CURRENT TIME  -->
+        <div class="time row d-flex justify-content-end pr-4 pt-3 pb-3">
+            <span class="timeText text-uppercase"> The time is currently <span id="currentTime"></span></span>
         </div>
 
-
+        <!-- CURRENT TRAIN SCHEDULE  -->
         <div class="row">
             <div class="col-sm-12">
-                <!-- Current trains-->
-                <div class="card mb-4 d-flex justify-content-around">
-                    <div class="card-header font-weight-bold">Current Train Schedule
-                        
+                <div class="card mb-4 d-flex rounded-0 justify-content-around">
+                    <div class="card-header rounded-0 font-weight-bold text-uppercase">Current Train Schedule
                     </div>
                     <div class="card-body">
                         <table class="table table-sm table-hover text-center" id='train-table'>
@@ -68,33 +69,32 @@
             </div>
         </div>
 
-
+        <!-- ADD TRAIN  -->
         <div class="row">
             <div class="col-md-12">
-                <!-- Add Train  -->
-                <div class="card mb-4">
-                    <div class="card-header font-weight-bold">Add Train</div>
+                <div class="card rounded-0 mb-4">
+                    <div class="card-header rounded-0 font-weight-bold text-uppercase">Add Train</div>
                     <div class="card-body">
 
-                        <!-- Entry Form -->
+                        <!-- USER INPUT FORM -->
                         <form>
                             <div class="form-group">
                                 <label for="train-name-input">Train Name</label>
-                                <input class="form-control" id="train-name-input" placeholder="The Royal Scotsman" type="text">
+                                <input class="form-control rounded-0" id="train-name-input" placeholder="The Royal Scotsman" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="destination-input">Destination</label>
-                                <input class="form-control" id="destination-input" placeholder="Dunrobin Castle" type="text">
+                                <input class="form-control rounded-0" id="destination-input" placeholder="Dunrobin Castle" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="start-input">First Train Time (HH:mm - military time)</label>
-                                <input class="form-control" id="start-input" placeholder="07:00" type="text">
+                                <input class="form-control rounded-0" id="start-input" placeholder="07:00" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="frequency-input">Frequency (min)</label>
-                                <input class="form-control" id="frequency-input" placeholder="45" type="text">
+                                <input class="form-control rounded-0" id="frequency-input" placeholder="45" type="text">
                             </div>
-                            <button class="btn text-uppercase font-weight-bold" id="add-train-btn">Add</button>
+                            <button class="btn text-uppercase  rounded-0 font-weight-bold" id="add-train-btn">Add</button>
                         </form>
                     </div>
                 </div>
@@ -102,6 +102,7 @@
         </div>
     </div>
 
+    <!-- JAVASCRIPT  -->
     <script src="./assets/javascript/main.js"></script>
 
 </body>

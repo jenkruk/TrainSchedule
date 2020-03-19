@@ -6,9 +6,18 @@
 .trainHeader {
     height: 300px;
     border-radius: 0;
-    background-image: url("../images/trainHeader.jpg");
+    background-image: url("../images/trainImg.jpg");
     background-repeat: no-repeat;
     margin-bottom: 0;
+}
+.timeText {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+
+#currentTime {
+    font-family: 'Scope One', serif;
+    font-size: 1.50rem;
 }
 
 .time {
@@ -22,16 +31,17 @@
 
 }
 
-#currentTime {
-    font-family: 'Playfair Display', serif;
-}
-
 .card-body {
     font-family: 'Raleway', sans-serif;
 }
 
 ::placeholder {
     color: lightgrey !important;
+}
+
+.delete {
+    font-size: 1.5rem;
+    margin-top: 0;
 }
 
 button {
